@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native'
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -29,18 +28,8 @@ export default class App extends React.Component {
     })
   }
 
-  _signIn() {
-    GoogleSignin.hasPlayServices({ autoResolve: true })
-    .then(() => {
-      // play services are available. can now configure library
-    })
-    .catch(err => {
-      console.log('Play services error', err.code, err.message);
-    });
-  }
-
   render() {
-    /*return (
+    return (
       <View style={styles.container}>
         <TouchableOpacity
           onPress={this.onPress}
@@ -54,16 +43,6 @@ export default class App extends React.Component {
         >
           <Text>Facebook Login</Text>
         </TouchableOpacity>
-      </View>
-    )*/
-    return (
-      <View style={styles.container}>
-        <GoogleSigninButton
-          style={{ width: 48, height: 48 }}
-          size={GoogleSigninButton.Size.Icon}
-          color={GoogleSigninButton.Color.Dark}
-          onPress={this._signIn}
-        />
       </View>
     )
   }
@@ -79,7 +58,6 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 4,
     padding: 10,
-    color: '#fff'
   },
   google: {
     backgroundColor: 'orange'
