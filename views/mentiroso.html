@@ -1,0 +1,26 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mentiroso - Juego de Cartas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="mentiroso.js"></script>
+</head>
+<body  class="container-fluid">
+    <h1 class="title">EL JUEGO DEL MENTIROSO</h1>
+    <div class="form-inline">
+        <button id="create" class="btn btn-dark">Create</button>
+        <button id="join" class="btn btn-dark">Join</button>
+            <input id="value" type="text" class="form-control">
+            <div class="input-group-append">
+                <button id="add" class="btn btn-dark" type="button">Add</button>
+            </div>
+        <button id="liftUp" class="btn btn-dark">Lift Up</button>
+    </div>
+    <h2 id="playerId">Player id: </h2>
+    <h2 id="turn">Turn: </h2>
+</body>
+</html>
